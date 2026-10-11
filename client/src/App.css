@@ -1,0 +1,86 @@
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #1e293b;
+  color: white;
+  padding: 30px 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 26px;
+  margin-bottom: 40px;
+  color: #38bdf8;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar nav li:hover {
+  background-color: #334155;
+}
+
+/* Main dashboard */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  min-width: 0;
+}
+
+.main-content h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.main-content p {
+  color: #64748b;
+}
+
+/* Task summary cards */
+.task-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.task-card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.task-card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 16px;
+}
+
+.task-card h2 {
+  font-size: 32px;
+}
+
+@media (max-width: 900px) {
+  .task-cards {
+    grid-template-columns: 1fr;
+  }
+}
