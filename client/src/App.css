@@ -84,3 +84,178 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Task List */
+.task-list {
+  margin-top: 35px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  overflow-x: auto;
+}
+
+.task-list h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.task-list table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.task-list th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.task-list td {
+  padding: 18px 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-list tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.task-list tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.completed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status-badge.in-progress {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.to-do {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.create-task-btn {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-task-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Task Form */
+.task-form {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.task-form h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.task-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-form form > div:not(.form-actions) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #1e293b;
+}
+
+.task-form input:focus,
+.task-form textarea:focus,
+.task-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.form-actions button {
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions button:first-child {
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+}
+
+.form-actions button:last-child {
+  background-color: #2563eb;
+  border: none;
+  color: #ffffff;
+}
+

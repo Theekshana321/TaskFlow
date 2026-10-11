@@ -2,16 +2,44 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
 import TaskCard from './components/TaskCard';
+import TaskList from './components/TaskList';
+import { useState } from 'react';
+import TaskForm from './components/TaskForm';
+
 
 function App() {
+
+  const [showTaskForm, setShowTaskForm] = useState(false);
   return (
     
     <div className='app'>
       <Sidebar/>
 
       <main className='main-content'>
-        <h1>Dashboard</h1>
-        <p>Welcome to your TaskFlow dashboard!</p>
+        <div className="dashboard-header">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Welcome to your TaskFlow dashboard!</p>
+          </div>
+
+          <button 
+          className="create-task-btn"
+          onClick={() => setShowTaskForm(true)}
+          >
+            
+            + Create Task
+          </button>
+        </div>
+
+                
+                {showTaskForm && (
+          <TaskForm
+            onCancel={() => setShowTaskForm(false)}
+          />
+        )}
+
+
+        
 
         <div className='task-cards'>
            <TaskCard
@@ -32,6 +60,7 @@ function App() {
             color="#16a34a"
           />
         </div>
+        <TaskList/>
       </main>
 
     </div>
